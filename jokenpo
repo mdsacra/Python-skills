@@ -1,0 +1,53 @@
+print('='*20, 'JOKEN-PÔ', '='*20)
+print('='*50)
+from random import randint
+contador = 0
+
+while contador < 100:
+    jokpc = randint(1,3)
+
+    print(' Escolha seu instrumento: \n (1) Pedra (2) Papel (3) Tesoura')
+    jokusu = int(input('>>> '))
+
+    if jokusu == 1:
+        print('VOCÊ: \33[1mPedra\33[m')
+    elif jokusu == 2:
+        print('VOCÊ: \33[1mPapel\33[m')
+    else:
+        print('VOCÊ: \33[1mTesoura\33[m')
+
+    if jokpc == 1:
+        print('PC: \33[1mPedra\33[m')
+        if jokusu == jokpc:
+            print('Empatamos!')
+        elif jokusu == 2:
+            print('Você ganhou!')
+        else:
+            print('Eu ganhei!')
+    elif jokpc == 2:
+        print('PC: \33[1mPapel\33[m')
+        if jokusu == jokpc:
+            print('Empatamos!')
+        elif jokusu == 3:
+            print('Você ganhou!')
+        else:
+            print('Eu ganhei!')
+    else:
+        print('PC: \33[1mTesoura\33[m')
+        if jokusu == jokpc:
+            print('Empatamos!')
+        elif jokusu == 1:
+            print('Você ganhou!')
+        else:
+            print('Eu ganhei!')
+    continuar = input('Jogar novamente? (S ou N) ').upper()
+    if continuar == 'N':
+        break
+    else:
+        contador = contador + 1
+print('\n Obrigado por jogar comigo!!!\n\n'
+      '    ---------\n'
+      '    | <   > |  MDS GAMES \n'
+      '    |   ;   |\n'
+      '    | [___] |  PRODUCERS \n'
+      '    ---------\n')
